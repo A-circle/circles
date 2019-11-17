@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'components/Ctextinput.dart';
 
 import 'components/Cbutton-arrow-right.dart';
 import 'components/Ctext-header.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: CTextInput(),
     );
   }
 }
