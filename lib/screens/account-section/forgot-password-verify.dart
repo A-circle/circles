@@ -4,21 +4,19 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // components goes here
 import 'package:circles/components/Ctext-header.dart';
 import 'package:circles/components/Cbutton-arrow-right.dart';
-import 'package:circles/components/Ctext-lower-bold.dart';
-import 'package:circles/components/Ctext-lower.dart';
 import 'package:circles/components/Ctextinput.dart';
 import 'package:circles/components/Cbutton-text.dart';
 
-class ForgotPassword extends StatefulWidget {
-  ForgotPassword({Key key, this.emailOrPhone}) : super(key: key);
+class ForgotPasswordVerify extends StatefulWidget {
+  ForgotPasswordVerify({Key key, this.emailOrPhone}) : super(key: key);
 
   final String emailOrPhone;
 
   @override
-  _ForgotPasswordState createState() => _ForgotPasswordState();
+  _ForgotPasswordVerifyState createState() => _ForgotPasswordVerifyState();
 }
 
-class _ForgotPasswordState extends State<ForgotPassword> {
+class _ForgotPasswordVerifyState extends State<ForgotPasswordVerify> {
   @override
   Widget build(BuildContext context) {
     //fill in the screen size of the device in the design
@@ -41,7 +39,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               height: ScreenUtil.getInstance().setHeight(100),
             ),
             CTextInput(
-              text: "Email or Phone",
+              text: "Verification Code",
               obscureText: false,
             ),
             SizedBox(

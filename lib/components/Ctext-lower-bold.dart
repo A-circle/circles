@@ -1,10 +1,10 @@
 import "package:flutter/material.dart";
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CTextLower extends StatelessWidget {
+class CTextLowerBold extends StatelessWidget {
   final String text;
 
-  CTextLower({this.text});
+  CTextLowerBold({this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +18,7 @@ class CTextLower extends StatelessWidget {
       text,
       style: TextStyle(
         color: Colors.black,
+        fontWeight: FontWeight.w500,
         fontSize: ScreenUtil(allowFontScaling: true).setSp(16),
       )
     );

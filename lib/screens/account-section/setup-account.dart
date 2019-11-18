@@ -4,21 +4,20 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // components goes here
 import 'package:circles/components/Ctext-header.dart';
 import 'package:circles/components/Cbutton-arrow-right.dart';
-import 'package:circles/components/Ctext-lower-bold.dart';
-import 'package:circles/components/Ctext-lower.dart';
 import 'package:circles/components/Ctextinput.dart';
-import 'package:circles/components/Cbutton-text.dart';
 
-class ForgotPassword extends StatefulWidget {
-  ForgotPassword({Key key, this.emailOrPhone}) : super(key: key);
-
-  final String emailOrPhone;
+class SetupAccount extends StatefulWidget {
+  SetupAccount({Key key}) : super(key: key);
 
   @override
-  _ForgotPasswordState createState() => _ForgotPasswordState();
+  _SetupAccountState createState() => _SetupAccountState();
 }
 
-class _ForgotPasswordState extends State<ForgotPassword> {
+class _SetupAccountState extends State<SetupAccount> {
+  String _fullName;
+  String _username;
+  String _password;
+
   @override
   Widget build(BuildContext context) {
     //fill in the screen size of the device in the design
@@ -35,23 +34,28 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               height: ScreenUtil.getInstance().setHeight(100),
             ),
             CTextHeader(
-              text: "Forgot Password",
+              text: "Create New Account",
             ),
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(100),
             ),
             CTextInput(
-              text: "Email or Phone",
+              text: "Full Name",
               obscureText: false,
             ),
             SizedBox(
-              height: ScreenUtil.getInstance().setHeight(25),
+              height: ScreenUtil.getInstance().setHeight(15),
             ),
-            CButtonText(
-              text: "Resend Code",
-              onPressed: () {
-                print("signing up...");
-              },
+            CTextInput(
+              text: "Username",
+              obscureText: false,
+            ),
+            SizedBox(
+              height: ScreenUtil.getInstance().setHeight(15),
+            ),
+            CTextInput(
+              text: "Password",
+              obscureText: true,
             ),
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(100),
@@ -59,7 +63,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             CButtonArrow(
               text: "Continue",
               onPressed: () {
-                print("verifying up...");
+                print("login up...");
               },
             )
           ],

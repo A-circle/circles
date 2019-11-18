@@ -19,13 +19,13 @@ class CButtonArrow extends StatelessWidget {
 
     return ButtonTheme(
       minWidth: ScreenUtil.getInstance().setWidth(100),
-      height: ScreenUtil.getInstance().setHeight(50),
+      height: ScreenUtil.getInstance().setHeight(40),
       child: RaisedButton(
         color: Colors.black54,
         onPressed: onPressed,
         child: Container(
           width: ScreenUtil.getInstance().setWidth(150),
-          height: ScreenUtil.getInstance().setHeight(50),
+          height: ScreenUtil.getInstance().setHeight(40),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,

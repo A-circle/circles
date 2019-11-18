@@ -18,7 +18,7 @@ class CButtonText extends StatelessWidget {
 
     return ButtonTheme(
       minWidth: ScreenUtil.getInstance().setWidth(100),
-      height: ScreenUtil.getInstance().setHeight(50),
+      height: ScreenUtil.getInstance().setHeight(40),
       child: RaisedButton(
         color: Colors.black54,
         onPressed: onPressed,
