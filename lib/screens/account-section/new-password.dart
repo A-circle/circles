@@ -7,6 +7,9 @@ import 'package:circles/components/Cbutton-arrow-right.dart';
 import 'package:circles/components/Ctextinput.dart';
 import 'package:circles/components/Cbutton-text.dart';
 
+// screens
+import 'package:circles/screens/account-section/signin.dart';
+
 class NewPassword extends StatefulWidget {
   NewPassword({Key key, this.emailOrPhone}) : super(key: key);
 
@@ -64,7 +67,8 @@ class _NewPasswordState extends State<NewPassword> {
             CButtonArrow(
               text: "Continue",
               onPressed: () {
-                print("verifying up...");
+                 Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => SignIn()));
               },
             )
           ],

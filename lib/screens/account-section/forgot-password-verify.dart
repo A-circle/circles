@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -6,6 +7,9 @@ import 'package:circles/components/Ctext-header.dart';
 import 'package:circles/components/Cbutton-arrow-right.dart';
 import 'package:circles/components/Ctextinput.dart';
 import 'package:circles/components/Cbutton-text.dart';
+
+// screens
+import 'package:circles/screens/account-section/new-password.dart';
 
 class ForgotPasswordVerify extends StatefulWidget {
   ForgotPasswordVerify({Key key, this.emailOrPhone}) : super(key: key);
@@ -57,7 +61,8 @@ class _ForgotPasswordVerifyState extends State<ForgotPasswordVerify> {
             CButtonArrow(
               text: "Continue",
               onPressed: () {
-                print("verifying up...");
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => NewPassword()));
               },
             )
           ],

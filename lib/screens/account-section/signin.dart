@@ -8,6 +8,10 @@ import 'package:circles/components/Ctext-lower-bold.dart';
 import 'package:circles/components/Ctext-lower.dart';
 import 'package:circles/components/Ctextinput.dart';
 
+// screens
+import 'package:circles/screens/account-section/forgot-password.dart';
+import 'package:circles/screens/account-section/signup.dart';
+
 class SignIn extends StatefulWidget {
   SignIn({Key key}) : super(key: key);
 
@@ -63,7 +67,8 @@ class _SignInState extends State<SignIn> {
                   GestureDetector(
                     child: CTextLowerBold(text: "Forgot Password"),
                     onTap: () {
-                      print("forgot password");
+                       Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => ForgotPassword()));;
                     },
                   )
                 ],
@@ -77,7 +82,8 @@ class _SignInState extends State<SignIn> {
                 text: "Create Account ",
               ),
               onTap: () {
-                print("creating new account up...");
+                 Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => CreateAccount()));;
               },
             ),
             SizedBox(

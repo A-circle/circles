@@ -8,6 +8,10 @@ import 'package:circles/components/Ctext-lower-bold.dart';
 import 'package:circles/components/Ctext-lower.dart';
 import 'package:circles/components/Ctextinput.dart';
 
+// screens
+import 'package:circles/screens/account-section/signin.dart';
+import 'package:circles/screens/account-section/signup-verify.dart';
+
 class CreateAccount extends StatefulWidget {
   CreateAccount({Key key, this.emailOrPhone}) : super(key: key);
 
@@ -39,7 +43,10 @@ class _CreateAccountState extends State<CreateAccount> {
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(100),
             ),
-            CTextInput(text: "Email or Phone",obscureText: false,),
+            CTextInput(
+              text: "Email or Phone",
+              obscureText: false,
+            ),
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(15),
             ),
@@ -54,7 +61,8 @@ class _CreateAccountState extends State<CreateAccount> {
                   GestureDetector(
                     child: CTextLowerBold(text: "Login"),
                     onTap: () {
-                      print("already have account");
+                       Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => SignIn()));
                     },
                   )
                 ],
@@ -66,7 +74,8 @@ class _CreateAccountState extends State<CreateAccount> {
             CButtonArrow(
               text: "Continue",
               onPressed: () {
-                print("signing up...");
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => VerifyAccount()));
               },
             )
           ],

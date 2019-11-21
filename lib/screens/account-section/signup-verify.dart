@@ -4,10 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // components goes here
 import 'package:circles/components/Ctext-header.dart';
 import 'package:circles/components/Cbutton-arrow-right.dart';
-import 'package:circles/components/Ctext-lower-bold.dart';
-import 'package:circles/components/Ctext-lower.dart';
 import 'package:circles/components/Ctextinput.dart';
 import 'package:circles/components/Cbutton-text.dart';
+
+// screens
+import 'package:circles/screens/account-section/setup-account.dart';
 
 class VerifyAccount extends StatefulWidget {
   VerifyAccount({Key key, this.emailOrPhone}) : super(key: key);
@@ -59,7 +60,8 @@ class _VerifyAccountState extends State<VerifyAccount> {
             CButtonArrow(
               text: "Continue",
               onPressed: () {
-                print("verifying up...");
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => SetupAccount()));
               },
             )
           ],

@@ -6,6 +6,9 @@ import 'package:circles/components/Ctext-header.dart';
 import 'package:circles/components/Cbutton-arrow-right.dart';
 import 'package:circles/components/Ctextinput.dart';
 
+// screens
+import 'package:circles/screens/account-section/signin.dart';
+
 class SetupAccount extends StatefulWidget {
   SetupAccount({Key key}) : super(key: key);
 
@@ -63,7 +66,8 @@ class _SetupAccountState extends State<SetupAccount> {
             CButtonArrow(
               text: "Continue",
               onPressed: () {
-                print("login up...");
+                 Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => SignIn()));;
               },
             )
           ],
