@@ -16,27 +16,28 @@ class CTextInput extends StatelessWidget {
       ..init(context);
 
     return Container(
+      height: ScreenUtil.getInstance().setHeight(55),
       padding: EdgeInsets.only(left: 45, right: 45),
-      child: Container(
-        width: ScreenUtil.getInstance().setWidth(320),
-        height: ScreenUtil.getInstance().setHeight(40),
-        child: Center(
-          child: TextField(
-            obscureText: obscureText,
-            style: TextStyle(
-                fontSize: ScreenUtil(allowFontScaling: true).setSp(19),
-                height: ScreenUtil.getInstance().setHeight(0.8)),
-            decoration: InputDecoration(
-                labelStyle: TextStyle(
-                    fontSize: ScreenUtil(allowFontScaling: true).setSp(16)),
-                labelText: text,
-                fillColor: Colors.white70,
-                filled: true,
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)))),
-            keyboardType: TextInputType.text,
+      child: TextFormField(
+        // maxLines: null,
+        obscureText: obscureText,
+        style: TextStyle(
+            fontSize: ScreenUtil(allowFontScaling: true).setSp(19),
+            height: ScreenUtil.getInstance().setHeight(1),
+            color: Colors.black),
+        decoration: InputDecoration(
+          labelStyle: TextStyle(
+              fontSize: ScreenUtil(allowFontScaling: true).setSp(16)),
+          labelText: text,
+          fillColor: Colors.white70,
+          filled: true,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(10),
+            ),
           ),
         ),
+        keyboardType: TextInputType.text,
       ),
     );
   }
